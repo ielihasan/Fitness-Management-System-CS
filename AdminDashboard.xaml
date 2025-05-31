@@ -1,0 +1,119 @@
+﻿<Window x:Class="FitnessTrackingSystemWPF.AdminDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Dashboard"         
+        Height="700" Width="1100" WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Background Image -->
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="bg4.jpg" 
+                        AlignmentY="Top" AlignmentX="Center" />
+        </Grid.Background>
+
+        <!-- Title -->
+        <TextBlock Text="Admin Dashboard"
+                   FontSize="36"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   FontFamily="Cambria"
+                   Margin="0,25,0,0"
+                   TextAlignment="Center"
+                   LineHeight="50" />
+
+
+        <!-- Back Button (Top Left) using previous_icon, with circular border -->
+        <Button Background="Transparent" 
+        Width="70" 
+        Height="70" 
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Top" 
+        Margin="20" 
+        Click="BackButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <!-- Make the button circular -->
+                    <Image Source="previous_icon.png" 
+                       Width="55" Height="55"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <!-- Small Card Container for Logged In User Info -->
+        <Border Background="DarkCyan" CornerRadius="15" Width="154" Height="173" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!-- Profile Icon -->
+                <Image Source="profile_icon.png" 
+                       Width="50" Height="50" HorizontalAlignment="Center" />
+
+                <!-- Logged-in Username -->
+                <TextBlock Text="Hi! Admin" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" Margin="10"/>
+
+                <!-- Logout Button -->
+                <Button Content="Logout" 
+                        Background="Transparent" 
+                        Foreground="White" 
+                        BorderBrush="White" 
+                        BorderThickness="1" 
+                        Width="100" 
+                        Height="30" 
+                        HorizontalAlignment="Center" 
+                        Margin="10"
+                        Click="LogoutButton_Click"/>
+            </StackPanel>
+        </Border>
+
+
+
+        <!-- Card Container -->
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" ItemWidth="250" ItemHeight="200" Width="790">
+            <!-- Manage Users Card -->
+            <Border Background="#FF4CAF50" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="ManageUsers_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Manage Users" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="user_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+
+            <!-- Manage Instructors Card -->
+            <Border Background="#FF2196F3" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="ManageInstructors_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Manage Instructors" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="instructors_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+
+            <!-- Manage Instruments Card -->
+            <Border Background="#FF9C27B0" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="ManageInstruments_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Manage Instruments" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="instruments_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+
+            <!-- Manage Admins Card -->
+            <Border Background="#FF673AB7" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="ManageAdmins_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Manage Admins" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="admins_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+
+            <!-- Exit Card -->
+            <Border Background="#FF9E9E9E" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="Exit_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Exit" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="exit_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+
+            <!-- About Card -->
+            <Border Background="#FF3F51B5" CornerRadius="10" Padding="20" Width="200" Height="150" Cursor="Hand" Margin="20" MouseDown="About_Click">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="About" FontSize="16" FontWeight="Bold" Foreground="White" TextAlignment="Center" />
+                    <Image Source="about_icon.png" Width="80" Height="80" Margin="10" />
+                </StackPanel>
+            </Border>
+        </WrapPanel>
+    </Grid>
+</Window>

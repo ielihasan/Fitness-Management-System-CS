@@ -1,0 +1,71 @@
+﻿<Window x:Class="FitnessTrackingSystemWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessTrackingSystemWPF"
+        mc:Ignorable="d"
+        Title="Fitness Tracking System" Height="700" Width="1100" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Create a container grid for the background video -->
+        <Grid>
+            <!-- Apply BlurEffect directly to the MediaElement -->
+            <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" Stretch="UniformToFill" MediaEnded="GetStartedButton_Click">
+                <MediaElement.Effect>
+                    <BlurEffect Radius="10" ></BlurEffect>
+                </MediaElement.Effect>
+            </MediaElement>
+        </Grid>
+
+        <!-- Main Title with Border -->
+        <Border BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="10"
+                Background="DarkGray"
+                Padding="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="0,195,0,0">
+            <TextBlock Text="Fitness Tracking Management System"
+                       FontFamily="Cambria"
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Foreground="Black"
+                       TextAlignment="Center" />
+        </Border>
+
+        <!-- Subtitle with Border -->
+        <Border BorderBrush="#FF5085A5"
+                BorderThickness="2"
+                CornerRadius="10"
+                Background="DarkKhaki"
+                Padding="8"
+                Margin="425,342,425,267" Height="75" Width="250">
+            <TextBlock Text="&quot;Your Only Limit Is You!&quot;"
+                       FontFamily="Cambria"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       Foreground="Black"
+                       TextAlignment="Center" Width="214" Height="28" VerticalAlignment="Center" HorizontalAlignment="Left" />
+        </Border>
+
+        <!-- Get Started Button -->
+        <Border>
+            <Button Content="Get Started"
+                FontFamily="Segoe UI"
+                FontSize="16"
+                Foreground="Black"
+                Background="LightSeaGreen"
+                BorderBrush="#FF406080"
+                BorderThickness="2"
+                Width="250"
+                Height="60"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,100"
+                Cursor="Hand"
+                Click="GetStartedButton_Click">
+            </Button>
+        </Border>
+    </Grid>
+</Window>
