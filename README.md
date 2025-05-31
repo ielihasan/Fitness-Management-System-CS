@@ -24,6 +24,9 @@ A desktop application built using C# and WPF (Windows Presentation Foundation) t
 - Admin Dashboard  
 - Manage Users/Instructors/Instruments/Admins
 
+  ![image](https://github.com/user-attachments/assets/5df9a0d1-c747-457a-a82d-10e65d05e1b5)
+
+
 *(See project documentation for full screenshots.)*
 
 ## 🚀 Getting Started
