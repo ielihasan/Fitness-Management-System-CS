@@ -33,6 +33,8 @@ A desktop application built using C# and WPF (Windows Presentation Foundation) t
   ![image](https://github.com/user-attachments/assets/de2cf7a3-41f3-469a-a242-6cc76bd2365f)
   ![image](https://github.com/user-attachments/assets/6800884e-a8bd-4176-ae03-6018d91e4118)
   ![image](https://github.com/user-attachments/assets/29831ad5-5c40-47a3-968d-445fdf0ee708)
+  bg0.mp4 (Main Screen Background Video)
+  [![Watch the video](https://img.youtube.com/vi/RzLx6K7X-l4/hqdefault.jpg)](https://youtu.be/RzLx6K7X-l4)
 
 
 *(See project documentation for full screenshots.)*
